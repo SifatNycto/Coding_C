@@ -580,46 +580,56 @@
  4321234             4321 234                *****
   32123               321 23                  ***
    212                 21 2                    *
-    1                   1                          */   
-// int main(void)
-// {
-//     int n = 5;
-//     for (int i = 1; i <= n; i++)
-//     {
-//         for (int j = (n-i); j >= 1; j--)
-//         {
-//             printf(" ");
-//         }
-//         for (int j = i; j >= 1; j--)
-//         {
-//             printf("*", j);
-//         }
-//         for (int j = 2; j <= i; j++)
-//         {
-//             printf("*", j);
-//         }
-//         printf("\n");
-//     }
+    1                   1                                  */
+
+int main(void)
+{
+    int n = 5;
+
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = (n-i); j >= 1; j--)
+        {
+            printf(" ");
+        }
+
+        for (int j = i; j >= 1; j--)
+        {
+            printf("%d", j);
+        }
+
+        
+        for (int j = 2; j <= i; j++)
+        {
+            printf("%d", j);
+        }
+
+        printf("\n");
+    }
 
 
-//     for (int i = (n-1); i >= 1; i--)
-//     {
-//         printf(" ");
-//         for (int j = 1; j <= ((n-1)-i); j++)
-//         {
-//             printf(" ");
-//         }
-//         for (int j = i; j >= 1; j--)
-//         {
-//             printf("*", j);
-//         }
-//         for (int j = 2; j <= i; j++)
-//         {
-//             printf("*", j);
-//         }
-//         printf("\n");
-//     }
-// }
+    for (int i = 4; i >= 1; i--)
+    {
+        printf(" ");
+
+        for (int j = 1; j <= (4-i); j++)
+        {
+            printf(" ");
+        }
+        
+        for (int j = i; j >= 1; j--)
+        {
+            printf("%d", j);
+        }
+
+        for (int j = 2; j <= i; j++)
+        {
+            printf("%d", j);
+        }
+
+        printf("\n");
+    }
+}
 
 
 //Diamond shape 2
@@ -768,40 +778,40 @@
 // 31524
 //   5
 //   5
-int main()
-{
-    int num[] = {3, 1, 5, 2, 4};  // Array of numbers
-    int size = 5;                  // Size of array
-    int lines = 3;                 // Number of lines to print
+// int main()
+// {
+//     int num[] = {3, 1, 5, 2, 4};  // Array of numbers
+//     int size = 5;                  // Size of array
+//     int lines = 3;                 // Number of lines to print
     
-    printf("Original pattern:\n");
-    for(int i = 1; i <= lines; i++)
-    {
-        for(int j = 0; j < size; j++)
-        {
-            if (i == 1)
-            {
-                // First line prints all numbers
-                printf("%d ", num[j]);
-            }
-            else 
-            {
-                if (j < 2 || j > 2) 
-                {
-                    // Print spaces except for middle position
-                    printf("  ");
-                }
-                else 
-                {
-                    // Print middle number
-                    printf("%d ", num[j]);
-                }
-            }
-        }
-        printf("\n");
-    }
-    return 0;
-}
+//     printf("Original pattern:\n");
+//     for(int i = 1; i <= lines; i++)
+//     {
+//         for(int j = 0; j < size; j++)
+//         {
+//             if (i == 1)
+//             {
+//                 // First line prints all numbers
+//                 printf("%d ", num[j]);
+//             }
+//             else 
+//             {
+//                 if (j < 2 || j > 2) 
+//                 {
+//                     // Print spaces except for middle position
+//                     printf("  ");
+//                 }
+//                 else 
+//                 {
+//                     // Print middle number
+//                     printf("%d ", num[j]);
+//                 }
+//             }
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
 
 
 
@@ -815,39 +825,39 @@ int main()
 //  45565
 //  45564
 //  45563
-int main() {
-    int lines = 4;
-    int columns = 4;
-    int last_value = 6;
+// int main() {
+//     int lines = 4;
+//     int columns = 4;
+//     int last_value = 6;
     
-    for(int i = 1; i <= lines; i++) {
-        int num = 3;  // Reset to 3 for each new line
+//     for(int i = 1; i <= lines; i++) {
+//         int num = 3;  // Reset to 3 for each new line
         
-        // Print leading space for lines after first
-        if(i > 1) {
-            printf(" ");
-        }
+//         // Print leading space for lines after first
+//         if(i > 1) {
+//             printf(" ");
+//         }
         
-        for(int j = 1; j <= columns; j++) {
-            if(i == 1 && j <= 2) {
-                // First line, first two positions: print number once
-                printf("%d", num);
-            }
-            else if(j <= 2 || j == columns) {
-                // First two positions or last position: print number once
-                printf("%d", num);
-            }
-            else {
-                // Middle positions: print number twice
-                printf("%d%d", num, num);
-            }
-            num++;  // Increment number for next position
-        }
+//         for(int j = 1; j <= columns; j++) {
+//             if(i == 1 && j <= 2) {
+//                 // First line, first two positions: print number once
+//                 printf("%d", num);
+//             }
+//             else if(j <= 2 || j == columns) {
+//                 // First two positions or last position: print number once
+//                 printf("%d", num);
+//             }
+//             else {
+//                 // Middle positions: print number twice
+//                 printf("%d%d", num, num);
+//             }
+//             num++;  // Increment number for next position
+//         }
         
-        // Print and decrement last value
-        printf("%d", last_value);
-        last_value--;
-        printf("\n");
-    }
-    return 0;
-}
+//         // Print and decrement last value
+//         printf("%d", last_value);
+//         last_value--;
+//         printf("\n");
+//     }
+//     return 0;
+// }

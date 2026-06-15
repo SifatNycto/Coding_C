@@ -1,5 +1,5 @@
-// #include <stdio.h>
-// #include <stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 // int main()
 // {
@@ -51,34 +51,54 @@
       *
 */
 
-#include <stdio.h>
+
+
+// int main()
+// {
+
+
+//     // upper part
+//     for(int i = 1; i <= 4; i++)
+//     {
+//         for(int j = 1; j <= 4 - i; j++)
+//             printf("  ");
+
+//         for(int j = 1; j <= i; j++)
+//             printf("*   ");
+
+//         printf("\n");
+//     }
+
+//     // lower part
+//     for(int i = 3; i >= 1; i--)
+//     {
+//         for(int j = 1; j <= 4 - i; j++)
+//             printf("  ");
+
+//         for(int j = 1; j <= i; j++)
+//             printf("*   ");
+
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+
+
+
+
+
+
+
+
 
 int main()
 {
+    int n;
 
-
-    // upper part
-    for(int i = 1; i <= 4; i++)
+    while(n % 2 != 0)
     {
-        for(int j = 1; j <= 4 - i; j++)
-            printf("  ");
-
-        for(int j = 1; j <= i; j++)
-            printf("*   ");
-
-        printf("\n");
-    }
-
-    // lower part
-    for(int i = 3; i >= 1; i--)
-    {
-        for(int j = 1; j <= 4 - i; j++)
-            printf("  ");
-
-        for(int j = 1; j <= i; j++)
-            printf("*   ");
-
-        printf("\n");
+        scanf("%d", &n);
     }
 
     return 0;
